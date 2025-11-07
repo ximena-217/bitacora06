@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitácora</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" href= "img/pixeles_Mesa-de-trabajo-1.ico">
+    <style>
+	
+    </style>
+	<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+	
+<body>
+	
+<aside id="cookie-banner" role="dialog" aria-live="polite" aria-describedby="cookie-text" aria-label="Notificación de cookies">
+    <p id="cookie-text">
+     Usamos cookies para mejorar tu experiencia 🍪
+Utilizamos cookies propias y de terceros para analizar el tráfico, personalizar el contenido y mostrarte publicidad acorde a tus intereses. Puedes aceptar todas las cookies o configurar tus preferencias en cualquier momento.
+      <a href="/politica-cookies.html" style="color:#bfe8d9; text-decoration:underline; margin-left:6px;">Más información</a>
+    </p>
+
+    <div class="actions">
+      <button id="cookie-decline" class="btn btn-secondary" aria-label="Rechazar cookies">Configurar</button>
+      <button id="cookie-accept" class="btn btn-primary" aria-label="Aceptar cookies">Aceptar</button>
+    </div>
+  </aside>
+
+  <script>
+    (function () {
+      const STORAGE_KEY = 'mi_sitio_cookies_aceptadas_v1'; // cambia la clave si actualizas la política
+      const banner = document.getElementById('cookie-banner');
+      const btnAccept = document.getElementById('cookie-accept');
+      const btnDecline = document.getElementById('cookie-decline');
+
+      // Mostrar banner si no existe aceptación
+      function shouldShowBanner() {
+        try {
+          return !localStorage.getItem(STORAGE_KEY);
+        } catch (e) {
+          // si localStorage falla (modo incognito estricto), muestra el banner
+          return true;
+        }
+      }
+
+      function showBanner() {
+        // pequeña espera para que CSS pueda animar
+        requestAnimationFrame(() => banner.classList.add('show'));
+        // acceso rápido con teclado al botón principal
+        btnAccept.focus();
+      }
+
+      function hideBanner(persist = false, accepted = false) {
+        banner.classList.remove('show');
+        // Si queremos persistir la elección en localStorage
+        if (persist) {
+          try {
+            localStorage.setItem(STORAGE_KEY, accepted ? 'accepted' : 'declined');
+          } catch (e) {
+            // ignore
+          }
+        }
+      }
+
+      // Acciones de botones
+      btnAccept.addEventListener('click', () => {
+        // aquí puedes inicializar scripts de analítica si usas consentimiento explícito
+        // p. ej. window.initializeAnalytics();
+        hideBanner(true, true);
+      });
+
+      btnDecline.addEventListener('click', () => {
+        // si quieres, llama una función para desactivar cookies/trackers
+        // p. ej. window.disableTrackers();
+        hideBanner(true, false);
+      });
+
+      // Cerrar con Escape por accesibilidad
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && banner.classList.contains('show')) {
+          hideBanner(false, false);
+        }
+      });
+
+      // Mostrar si procede al cargar
+      if (shouldShowBanner()) {
+        // espera a que cargue el layout para evitar saltos visuales
+        window.addEventListener('load', () => {
+          showBanner();
+        });
+      } else {
+        // si ya aceptó/declinó, podrías revisar el valor:
+        // const val = localStorage.getItem(STORAGE_KEY); // 'accepted' o 'declined'
+        // y ejecutar lógica según el valor
+      }
+    })();
+  </script>
+	
+ <!--<img src="img/encabezado.jpg"  width=102%>-->
+	<div id="inicio" class="encabezadoo">
+	  <img src="img/xim.png" width=60% >
+     </div>
+	
+	
+	<div class="menu">
+       <a href="#inicio" style="padding: 10px 20px;">Inicio</a>
+	  <a href="#unidad1" style="padding: 10px 20px;">Unidad 1</a>
+	  <a href="#proyectou1" style="padding: 10px 20px;">Proyecto U1</a>
+	  <a href="#unidad2" style="padding: 10px 20px;">Unidad 2</a>
+	  <a href="#proyectou2" style="padding: 10px 20px;">Proyecto U2</a>
+	  <a href="#unidad3" style="padding: 10px 20px;">Unidad 3</a>
+    </div>
+	
+	<!--<div class="rotar">
+	  <a href="https://www.youtube.com/watch?v=DDSerADikPg&list=RDDDSerADikPg&start_radio=1" 
+     class="rotar" 
+     title="Ir a YouTube" 
+     target="_blank"> 
+    <img src="img/Fondo%20copia.png" alt="Imagen rotando">
+  </a>
+	 </div> -->
+	
+	 <!-- 🔹 Enlace giratorio -->
+  <a href="https://www.youtube.com/watch?v=DDSerADikPg&list=RDDDSerADikPg&start_radio=1"
+     class="rotar"
+     title="Ir a YouTube"
+     target="_blank">
+    <img src="img/Fondo%20copia2.png" alt="Imagen rotando">
+  </a>
+	<!-- <div class="rotar">
+   	<img src="img/Fondo%20copia.png"  width=100% alt="Imagen rotando">
+		  <a href="https://www.youtube.com/watch?v=DDSerADikPg&list=RDDDSerADikPg&start_radio=1" class="rotar" title="Ir a Google"> </a>
+  </div> -->
+	
+	<div class="franja">Un poco sobre mi!!</div>
+	
+	<div class="img">
+	<img src="img/Mi%20logo-03.jpg"  width=30%>
+	</div>
+	
+	<div class="textos">Hola!! mi nombre es Ximena Marchand Martínez,mi matrícula es 217217, estoy cursando el 9no semestre en la carrera de Diseño gráfico. Esta es mi bitácora en donde podrás encontrar mis trabajos realizados en la clase de diseño web grupo 3, por el momento solo abarcan la 1era unidad de 3. Los trabajos que verán a continuación son: </div>
+	
+	
+	
+ <div id="unidad1" class="franja">Unidad 1</div>
+	
+	<div class="parrafos">Video y Mapa</div>
+	
+	<div class="canvas">
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2871.71558997786!2d-106.43573272510015!3d31.74204307411327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86ea4359ba3469d5%3A0x5fdab3bc5a4f953c!2sUACJ%20IIT-IADA!5e1!3m2!1ses-419!2smx!4v1757471184177!5m2!1ses-419!2smx" width="1000" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe>
+	</div>
+	
+	<div class="canvas">	
+	<iframe width="1000" height="600" src="https://www.youtube.com/embed/gycFpLTqgTc?si=aSxgS93PLfVgtsNA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+	</iframe>
+	</div>
+	
+ 
+ <div class="parrafos">1.Hipertexto, UX y prototipado</div>
+	<img src="img/2.jpg"  width=80%> 
+	
+ <div class="parrafos">2.Shorcuts</div>
+<img src="img/3.jpg"  width=80%> 
+	<div class="textos"></div>
+	
+	<div class="parrafos">3.Diagrama etiquetas</div>
+	
+	<img src="img/Act.%202%20Revisi%C3%B3n%20bit%C3%A1cora%20Ximena%20Marchand%20217217.jpg" width=80%> 
+	
+	
+	<div class="parrafos">4.Figma</div>
+	<img src="img/Captura%20de%20pantalla%20(963).png"  width=80%> 
+	
+	<div class="parrafos">5.Diagrama ASSETOLAND</div>
+	<img src="img/ASSETTOLAND%20(1).jpg"  width=80%> 
+	
+	<div class="parrafos">6.Diagrama Chat GPT</div>
+	<img src="img/Flow%20Chart.png"  width=60%>
+	
+<div class="parrafos">6.Diagrama de flujo bitácora</div>
+	<img src="img/Inicio.jpg"  width=60%>
+	<div id= "proyectou1" class="franja">Mini proyecto</div>
+	<div class="parrafos">La IA puede ser artista?</div>
+	<img src="img/luchadores%20edicion.jpg"  width=80%>
+	<img src="img/IA.jpg"  width=80%>
+	
+	<div id="unidad2" class="franja">Unidad 2</div>
+	<div class="parrafos">Act 1- Bocetos </div>
+	<img src="img/Bocetos%20a%20mano.jpg"  width=80%>
+	
+	<div class="parrafos">Act 2- Wireframes estáticos </div>
+	<img src="img/Wireframes%20est%C3%A1ticos-02.jpg"  width=60%>
+	
+	<div class="parrafos">Act 3- Mapa del sitio / página </div>
+	<img src="img/Mapa%20del%20sitio_Mesa%20de%20trabajo%201.jpg"  width=60%>
+	
+	<div class="parrafos">Boceto Fino </div>
+	<img src="img/Bo%20F.jpg"  width=60%>
+	
+	<div class="parrafos">Muckups página UACJ </div>
+	<img src="img/6.jpg"  width=60%>
+	
+	<img src="img/5.jpg"  width=60%>SSS
+	
+	
+	<div class="parrafos">Act 4- Gráfico de Joan Costa </div>
+	
+	<div class="canvas">
+	<div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+		
+		
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+  
+		src="https://www.canva.com/design/DAGzsJgVVsA/kzdXuEGROH3Ny65VI6ilUg/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
+			
+</div>
+	 </div> 
+	
+<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGzsJgVVsA&#x2F;kzdXuEGROH3Ny65VI6ilUg&#x2F;view?utm_content=DAGzsJgVVsA&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener"></a> 
+	
+	
+	 
+	
+	<div class="parrafos">Tabla (Horario) </div>
+	
+	<div class="tabla">
+	<table>
+        <tr>
+            <th>Lunes</th>
+            <th>Martes</th>
+			<th>Miércoles</th>
+			<th>Jueves</th>
+			<th>Viernes</th>
+			
+        </tr>
+		
+        <tr>
+            <td>Sistemas visuales</td>
+            <td>Taller</td>
+			<td>Sistemas visuales</td>
+			<td>Taller</td>
+			<td>Sistemas visuales </td>
+        </tr>
+		
+        <tr>
+            <td>Diseño web</td>
+            <td>Liderazgo</td>
+			<td>Diseño web</td>
+			<td>Liderazgo</td>
+			<td>Diseño web</td>
+        </tr>
+		
+		  <tr>
+            <td>P. Fotográfica</td>
+            <td></td>
+			<td>P. Fotográfica</td>
+			<td></td>
+			<td></td>
+        </tr>
+		
+		<tr>
+            <td>Principios</td>
+            <td></td>
+			<td>Principios</td>
+			<td></td>
+			<td></td>
+        </tr>
+		
+    </table>
+		</div>
+	
+	<div class="parrafos">Act 5- Logotipo </div>
+	
+	<div class="canvas">
+	<div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https://www.canva.com/design/DAG0k7CYPOc/ScQ0E0klfpr7eFrPabII9A/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen" width=60%>
+  </iframe>
+</div>
+		</div>
+	
+<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAG0k7CYPOc&#x2F;ScQ0E0klfpr7eFrPabII9A&#x2F;view?utm_content=DAG0k7CYPOc&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener"></a> 
+	
+
+<div id="proyectou2" class="franja">Proyecto Final Unidad 2</div>
+	
+	<div class="canvas">
+	<div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https://www.canva.com/design/DAG1uDiyyMM/7ct8xmTjIABesFJAnCJvtA/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
+</div>
+		</div>
+	
+<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAG1uDiyyMM&#x2F;7ct8xmTjIABesFJAnCJvtA&#x2F;view?utm_content=DAG1uDiyyMM&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener"></a> 
+	
+<div id="unidad3" class="franja">Unidad 3</div>
+	
+	<div class="parrafos">Act Nuevos temas bitácora </div>
+	
+<div class="canvas">
+	<div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https://www.canva.com/design/DAG1ul0EMdA/XRI6zyK5-WdHEWwZ6rT4iA/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
+</div>
+	</div>
+	
+<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAG1ul0EMdA&#x2F;XRI6zyK5-WdHEWwZ6rT4iA&#x2F;view?utm_content=DAG1ul0EMdA&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener"></a> 
+
+	<div class="parrafos">Página Web equipo</div>
+	
+	<div class="canvas">
+	<div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https://www.canva.com/design/DAG1uDiyyMM/7ct8xmTjIABesFJAnCJvtA/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
+</div>
+	</div>
+	
+	<div class="parrafos">Página web chat GPT </div>
+	
+	<div class="canvas">
+	<div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https://www.canva.com/design/DAG3Ct-o0CQ/_DtSBngbrPFiAkrBaWF48w/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
+</div>
+		</div>
+	
+<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAG3Ct-o0CQ&#x2F;_DtSBngbrPFiAkrBaWF48w&#x2F;view?utm_content=DAG3Ct-o0CQ&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener"></a> 
+	
+	<div class="parrafos">Cotización </div>
+	<img src="img/WhatsApp%20Image%202025-11-05%20at%2011.20.56%20AM.jpeg"  width=40%> 
+	
+	<div class="parrafos">Formulario </div>
+	
+    <form action="">
+        <label for="name">Escribe tu nombre completo en el siguiente formulario</label><br>
+        <input type="text" id="name" value="Ximena Marchand">
+        <input type="submit" value="Guardar">
+    </form>
+			
+	<footer>
+	<div class="footer">
+		
+	Ximena Marchand
+	<p> Diseño web grupo 3</p>
+	<p> Matrícula:217217</p>
+		</div>
+</footer>
+</body>
+	
+
+</html>
